@@ -1,16 +1,24 @@
 package com.hzdp.controller;
 
-import com.hzdp.web.Action;
-import com.hzdp.web.IAction;
-import com.hzdp.web.IRequest;
-import com.hzdp.web.IResponse;
+import org.apache.log4j.Logger;
 
-@Action(url = "friend.we")
-public class FriendAction implements IAction {
+import com.hzdp.web.annotation.Action;
+import com.hzdp.web.api.IAction;
+import com.hzdp.web.api.IResponse;
+
+@Action(url = "friend.ac", value = "friend.ac")
+public class FriendAction implements IAction<FriendRequest> {
+
+	private static final Logger logger = Logger.getLogger(FriendAction.class);
 
 	@Override
-	public IResponse execute(IRequest request) {
-		return null;
+	public IResponse execute(FriendRequest request) {
+		String id = request.getId();
+		logger.info("id=" + id);
+		FriendResponse entity = new FriendResponse();
+		entity.setId(1);
+		entity.setName("name for" + entity.getId());
+		return entity;
 	}
 
 }

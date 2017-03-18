@@ -25,31 +25,6 @@
 			<version>3.1</version>
 		</dependency>
 
-		<!-- struts -->
-		<dependency>
-			<groupId>org.apache.struts.xwork</groupId>
-			<artifactId>xwork-core</artifactId>
-			<version>2.3.24.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-spring-plugin</artifactId>
-			<version>${struts.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.apache.struts.xwork</groupId>
-					<artifactId>xwork-core</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-json-plugin</artifactId>
-			<version>${struts.version}</version>
-		</dependency>
-
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
@@ -68,11 +43,6 @@
 			<version>3.0.5</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.hzdp</groupId>
-			<artifactId>hzdp-service</artifactId>
-			<version>0.1</version>
-		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -124,11 +94,11 @@
 			</exclusions>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>com.octo.captcha</groupId> -->
-		<!-- <artifactId>jcaptcha-integration-struts</artifactId> -->
-		<!-- <version>1.0</version> -->
-		<!-- </dependency> -->
+	<dependency>
+	    <groupId>com.ming</groupId>
+		<artifactId>ming-util</artifactId>
+		<version>0.1</version>
+	</dependency>
 	</dependencies>
 
 	<build>

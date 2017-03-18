@@ -1,4 +1,4 @@
-package com.hzdp.web;
+package com.hzdp.web.api;
 
 public interface IRequest {
 

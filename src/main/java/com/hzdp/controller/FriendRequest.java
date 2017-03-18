@@ -1,6 +1,6 @@
 package com.hzdp.controller;
 
-import com.hzdp.web.IRequest;
+import com.hzdp.web.api.IRequest;
 
 public class FriendRequest implements IRequest {
 
