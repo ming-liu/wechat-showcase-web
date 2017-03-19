@@ -5,6 +5,8 @@ import com.hzdp.web.api.IRequest;
 public class FriendRequest implements IRequest {
 
 	private String id;
+	private String name;
+	private String age;
 
 	public String getId() {
 		return id;
@@ -12,6 +14,22 @@ public class FriendRequest implements IRequest {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
 	}
 
 }

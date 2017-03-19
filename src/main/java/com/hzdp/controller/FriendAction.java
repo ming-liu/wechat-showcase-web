@@ -14,7 +14,10 @@ public class FriendAction implements IAction<FriendRequest> {
 	@Override
 	public IResponse execute(FriendRequest request) {
 		String id = request.getId();
-		logger.info("id=" + id);
+		String name = request.getName();
+		String age = request.getAge();
+		logger.info("id=" + id + ",name=" + name + ",age=" + age);
+		System.out.println("id=" + id + ",name=" + name + ",age=" + age);
 		FriendResponse entity = new FriendResponse();
 		entity.setId(1);
 		entity.setName("name for" + entity.getId());

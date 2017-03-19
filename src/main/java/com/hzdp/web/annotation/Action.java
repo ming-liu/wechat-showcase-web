@@ -16,4 +16,5 @@ public @interface Action {
 
 	String value() default "";
 
+	// compressed 
 }

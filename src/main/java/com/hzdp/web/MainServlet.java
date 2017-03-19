@@ -36,6 +36,7 @@ public class MainServlet extends HttpServlet {
 	protected void handleRequest(HttpServletRequest req, HttpServletResponse resp, boolean isPost) {
 		logger.debug("handleRequest in .");
 		String actionKey = parseActionKey(req);
+		@SuppressWarnings("rawtypes")
 		IAction action = ActionFactory.createAction(actionKey);
 		RequestContext context = RequestFactory.createRequestContext(req);
 		try {
@@ -47,7 +48,7 @@ public class MainServlet extends HttpServlet {
 			resp.setStatus(200);
 			resp.getOutputStream().write(wrap);
 		} catch (Throwable e) {
-			e.printStackTrace();
+			logger.error(e, e);
 		}
 	}
 
