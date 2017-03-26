@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import com.hzdp.web.constants.EncrptConstants;
@@ -27,10 +28,12 @@ public class RequestFactory {
 			InputStream is = req.getInputStream();
 			byte[] bytes = StreamUtil.readAll2Byte(is);
 			String params = EncryptionUtil.decrptToStr(bytes, EncrptConstants.key, EncrptConstants.iv);
-			String[] split = params.split("&");
-			for (String pairs : split) {
-				String[] pair = pairs.split("=");
-				paramsMap.put(pair[0], pair[1]);
+			if (StringUtils.isNotEmpty(params)) {
+				String[] split = params.split("&");
+				for (String pairs : split) {
+					String[] pair = pairs.split("=");
+					paramsMap.put(pair[0], pair[1]);
+				}
 			}
 		} catch (IOException e) {
 			logger.error(e, e);

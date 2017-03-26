@@ -2,6 +2,8 @@ package com.hzdp.controller;
 
 import org.apache.log4j.Logger;
 
+import com.hzdp.controller.bean.FriendRequest;
+import com.hzdp.controller.bean.FriendResponse;
 import com.hzdp.web.annotation.Action;
 import com.hzdp.web.api.IAction;
 import com.hzdp.web.api.IResponse;
@@ -19,7 +21,7 @@ public class FriendAction implements IAction<FriendRequest> {
 		logger.info("id=" + id + ",name=" + name + ",age=" + age);
 		System.out.println("id=" + id + ",name=" + name + ",age=" + age);
 		FriendResponse entity = new FriendResponse();
-		entity.setId(1);
+		entity.setId("1");
 		entity.setName("name for" + entity.getId());
 		return entity;
 	}

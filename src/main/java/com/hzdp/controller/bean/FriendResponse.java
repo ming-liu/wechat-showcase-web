@@ -1,17 +1,18 @@
-package com.hzdp.controller;
+package com.hzdp.controller.bean;
 
 import com.hzdp.web.BaseResponse;
 
 public class FriendResponse extends BaseResponse {
 
-	private int id;
+	private String id;
 	private String name;
+	private String age;
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -21,6 +22,14 @@ public class FriendResponse extends BaseResponse {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
 	}
 
 }

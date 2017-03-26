@@ -1,4 +1,4 @@
-package com.hzdp.controller;
+package com.hzdp.controller.bean;
 
 import com.hzdp.web.api.IRequest;
 
