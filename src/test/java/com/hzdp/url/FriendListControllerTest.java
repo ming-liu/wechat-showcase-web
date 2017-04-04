@@ -49,8 +49,14 @@ public class FriendListControllerTest {
 		}
 
 		bytes = bos.toByteArray();
+		StringTest.print(bytes);
+		System.out.println();
 		byte[] decrpt = NoPaddingEncryptor.decrpt(bytes, key, iv, true);
+		StringTest.print(decrpt);
+		System.out.println();
 		byte[] unGzip = CompressUtil.unGzip(decrpt);
+		StringTest.print(unGzip);
+		System.out.println();
 		System.out.println(new String(unGzip));
 	}
 }

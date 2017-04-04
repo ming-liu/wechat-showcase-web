@@ -23,7 +23,7 @@ public class StringTest {
 
 	}
 
-	private static void print(byte[] bytes) {
+	public static void print(byte[] bytes) {
 		for (byte b : bytes) {
 			System.out.print(b & 0xff);
 			System.out.print(", ");

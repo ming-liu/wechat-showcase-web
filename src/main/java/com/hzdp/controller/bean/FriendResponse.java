@@ -7,6 +7,7 @@ public class FriendResponse extends BaseResponse {
 	private String id;
 	private String name;
 	private String age;
+	private String lastMsg;
 
 	public String getId() {
 		return id;
@@ -30,6 +31,14 @@ public class FriendResponse extends BaseResponse {
 
 	public void setAge(String age) {
 		this.age = age;
+	}
+
+	public String getLastMsg() {
+		return lastMsg;
+	}
+
+	public void setLastMsg(String lastMsg) {
+		this.lastMsg = lastMsg;
 	}
 
 }
